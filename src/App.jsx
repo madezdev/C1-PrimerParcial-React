@@ -27,16 +27,16 @@ function App() {
     e.preventDefault();
 
     if (formData.name.trim() === "" || formData.email.trim() === "") {
-      setError('Los campos "name" y "email" son obligatorios');
+      setError('Los campos "Nombre y Apellido" y "Correo electronico" son obligatorios');
       setSubmittedData(null);
     } else if (!isValidEmail(formData.email.trim())) {
       setError("El correo electrónico no es válido");
       setSubmittedData(null);
     } else if (formData.name.trim().length < 3) {
-      setError('El campo "name" debe tener al menos 3 caracteres');
+      setError('El campo "Nombre y Apellido" debe tener al menos 3 caracteres');
       setSubmittedData(null);
     } else if (formData.email.trim().length < 6) {
-      setError('El campo "email" debe tener al menos 6 caracteres');
+      setError('El campo "Correo electronico" debe tener al menos 6 caracteres');
       setSubmittedData(null);
     } else {
       setError("");
